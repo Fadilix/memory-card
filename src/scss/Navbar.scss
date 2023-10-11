@@ -1,0 +1,42 @@
+.nav {
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-inline: 40px;
+
+
+    .dbz-btn {
+
+        width: 250px;
+
+        button {
+            all: unset;
+            cursor: pointer;
+            transition: .3s all;
+
+            &:hover {
+                transform: scale(1.1);
+            }
+
+            img {
+                width: 100%;
+            }
+        }
+    }
+
+    .score{
+        color: white;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        background-color: orange;
+        padding: 10px;
+        border-radius: 10px;
+    }
+
+
+    @media screen and (max-width: 768px) {
+        flex-direction: column;
+    }
+}

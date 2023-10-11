@@ -1,0 +1,13 @@
+.game {
+    .cards {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        margin-top: 40px;
+
+        @media (max-width: 600px) {
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+}
