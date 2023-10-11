@@ -13,67 +13,17 @@ import Jiren from "../assets/Jiren.jpg"
 import Whis from "../assets/Whis.avif"
 
 export const imagesData = [
-    {
-        name: "Bulma",
-        src: bulma
-    },
-
-    {
-        name: "Chichi",
-        src: chichi
-    },
-
-    {
-        name: "Gohan",
-        src: gohan
-    },
-
-    {
-        name: "Goku",
-        src: goku
-    },
-
-    {
-        name: "Goku UI",
-        src: gokuUI
-    },
-
-    {
-        name: "Great sayaman",
-        src: gsayaman
-    },
-
-    {
-        name: "Vegeta",
-        src: vegeta
-    },
-
-    {
-        name: "Videl",
-        src: videl
-    },
-    {
-        name: "Beerus",
-        src: Beerus
-    },
-
-    {
-        name: "C-17",
-        src: c17
-    },
-
-    {
-        name: "C-18",
-        src: c18,
-    },
-
-    {
-        name: "Jiren",
-        src: Jiren
-    },
-
-    {
-        name: "Whis",
-        src: Whis
-    },
+    { name: "Bulma", src: bulma },
+    { name: "Chichi", src: chichi },
+    { name: "Gohan", src: gohan },
+    { name: "Goku", src: goku },
+    { name: "Goku UI", src: gokuUI },
+    { name: "Great sayaman", src: gsayaman },
+    { name: "Vegeta", src: vegeta },
+    { name: "Videl", src: videl },
+    { name: "Beerus", src: Beerus },
+    { name: "C-17", src: c17 },
+    { name: "C-18", src: c18, },
+    { name: "Jiren", src: Jiren },
+    { name: "Whis", src: Whis },
 ]
