@@ -7,6 +7,7 @@ import cardBackImage from '../assets/kame-house.jpg';
 const Card = ({ src, name, isFlipped, handleCardClick }) => {
     const cardClasses = `front-and-back ${isFlipped ? 'rotate' : ''}`;
 
+
     return (
         <ReactParallaxTilt
             glareEnable={true}

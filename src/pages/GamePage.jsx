@@ -6,6 +6,7 @@ import "../scss/GamePage.scss";
 import Footer from '../components/Footer';
 import { useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
+import flip from "../music/flip.mp3"
 
 const GamePage = () => {
     const [cards, setCards] = useState(getRandomCards(imagesData, 4));
@@ -13,6 +14,7 @@ const GamePage = () => {
     const [isFlipped, setIsFlipped] = useState(false);
     const [score, setScore] = useState(0);
     const [bestScore, setBestScore] = useState(0);
+    const audio = new Audio(flip);
     const navigate = useNavigate();
 
     useEffect(() => {
@@ -24,10 +26,9 @@ const GamePage = () => {
 
     const handleCardClick = (cardName) => {
         if (!isFlipped) {
-
+            audio.play();
             if (!selectedCards.includes(cardName)) {
                 setIsFlipped(true);
-
                 setTimeout(() => {
                     setIsFlipped(false);
                     setCards(getRandomCards(imagesData, 4));

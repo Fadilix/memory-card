@@ -8,6 +8,11 @@
     padding-top: 20px;
     padding-bottom: 40px;
     cursor: pointer;
+    
+
+    @media (min-width: 1247px) {
+        max-width: 100%;
+    }
 
     img {
         border-radius: 10px;
@@ -43,11 +48,13 @@
 }
 
 .front-and-back {
-    transition: transform 0.6s ease;
+    position: relative;
+    transform-style: preserve-3d;
 
 }
 
+
 .rotate {
     transform: rotateY(180deg);
-    transition: transform 0.6s ease;
+    transition: .8s;
 }
