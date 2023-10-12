@@ -1,4 +1,3 @@
-// Card.jsx
 import React from 'react';
 import "../scss/Card.scss";
 import ReactParallaxTilt from 'react-parallax-tilt';
@@ -6,8 +5,6 @@ import cardBackImage from '../assets/kame-house.jpg';
 
 const Card = ({ src, name, isFlipped, handleCardClick }) => {
     const cardClasses = `front-and-back ${isFlipped ? 'rotate' : ''}`;
-
-
     return (
         <ReactParallaxTilt
             glareEnable={true}

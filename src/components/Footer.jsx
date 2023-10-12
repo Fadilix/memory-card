@@ -9,7 +9,6 @@ const Footer = () => {
     const playMusic = () => {
         const audio = audioRef.current;
         setIsMusicPlaying(!isMusicPlaying);
-
         if (isMusicPlaying) {
             audio.pause();
         } else {
