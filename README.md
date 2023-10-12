@@ -31,8 +31,10 @@ npm run dev
 This project is part of [The Odin Project](https://www.theodinproject.com/)'s curriculum. The goal is to create a memory card game using React
 
 ## Outcome
-- React JS
+- Used React JS
 - Used SCSS
+- Learned some basics of framer-motion animations
+- Improved thinking in React
 
 ## Features
 - Flip and match cards to test your memory.
