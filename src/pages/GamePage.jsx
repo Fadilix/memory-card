@@ -27,8 +27,8 @@ const GamePage = () => {
 
     const handleCardClick = (cardName) => {
         if (!isFlipped) {
-            audio.play();
             if (!selectedCards.includes(cardName)) {
+                audio.play();
                 setIsFlipped(true);
                 setTimeout(() => {
                     setIsFlipped(false);
