@@ -23,7 +23,7 @@ git clone https://github.com/Fadilix/memory-card.git
 npm install
 ```
 
-3. Running the App
+3. Run the App
 ```
 npm run dev
 ```
