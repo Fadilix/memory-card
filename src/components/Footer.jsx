@@ -1,21 +1,22 @@
-import React, { useState } from 'react';
+import React, { useRef, useState } from 'react';
 import "../scss/Footer.scss";
 import headChala from "../music/chala.mp3"
 import { motion } from 'framer-motion';
 
 const Footer = () => {
+    const audioRef = useRef(new Audio(headChala));
     const [isMusicPlaying, setIsMusicPlaying] = useState(false);
 
     const playMusic = () => {
-        const audio = new Audio(headChala);
+        const audio = audioRef.current;
+        setIsMusicPlaying(!isMusicPlaying);
+
         if (isMusicPlaying) {
             audio.pause();
         } else {
             audio.play();
         }
-        setIsMusicPlaying(!isMusicPlaying);
     };
-
     const [help, setHelp] = useState(false);
     const handleHelpMessage = () => {
         setHelp(!help);

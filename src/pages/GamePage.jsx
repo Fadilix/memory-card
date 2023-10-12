@@ -14,6 +14,7 @@ const GamePage = () => {
     const [isFlipped, setIsFlipped] = useState(false);
     const [score, setScore] = useState(0);
     const [bestScore, setBestScore] = useState(0);
+    
     const audio = new Audio(flip);
     const navigate = useNavigate();
 
