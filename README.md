@@ -37,7 +37,7 @@ This project is part of [The Odin Project](https://www.theodinproject.com/)'s cu
 - Improved thinking in React
 
 ## Features
-- Flip and match cards to test your memory.
+- Flip and match cards to test your memory. 
 #
 ![giphy (6)](https://github.com/Fadilix/memory-card/assets/121851593/fab51578-dfc9-4597-9de6-1d892d3bee6e)
 
