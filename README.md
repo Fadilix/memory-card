@@ -45,7 +45,7 @@ This project is part of [The Odin Project](https://www.theodinproject.com/)'s cu
 - Keep track of your score and best score.
 - Enjoy a responsive design for various screen sizes.
 - Music
-- Local storage
+- Local storage to keep your best score
 - Paralax tilt
 #
 ![giphy (3)](https://github.com/Fadilix/memory-card/assets/121851593/902565d0-3fb4-4ad2-aa0a-051349c22f1e)
