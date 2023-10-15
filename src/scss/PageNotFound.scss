@@ -1,0 +1,40 @@
+.pnf {
+    overflow: hidden;
+
+    .content {
+        height: 70vh;
+        overflow: hidden;
+        width: 100vw;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: -100px;
+        gap: 10px;
+        overflow: hidden;
+
+        &::after {
+            content: "";
+            position: absolute;
+            width: 100vw;
+            height: 120vh;
+            z-index: -1;
+            background: url(../assets/bg-dbz.jpg);
+            background-position: center;
+            background-size: cover;
+            filter: blur(4px)
+        }
+
+        .vertical-line {
+            width: 3px;
+            height: 10%;
+            background-color: white;
+        }
+
+        p {
+            text-shadow: 0 0 5px black;
+            font-size: 5vw;
+            font-weight: bold;
+            color: white;
+        }
+    }
+}
