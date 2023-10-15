@@ -31,19 +31,21 @@ npm run dev
 This project is part of [The Odin Project](https://www.theodinproject.com/)'s curriculum. The goal is to create a memory card game using React
 
 ## Outcome
-- React JS
+- Used React JS
 - Used SCSS
+- Learned some basics of framer-motion animations
+- Improved thinking in React
 
 ## Features
-- Flip and match cards to test your memory.
+- Flip and match cards to test your memory. 
 #
 ![giphy (6)](https://github.com/Fadilix/memory-card/assets/121851593/fab51578-dfc9-4597-9de6-1d892d3bee6e)
 
 #
 - Keep track of your score and best score.
 - Enjoy a responsive design for various screen sizes.
-- Music
-- Local storage
+- Music (controlable) : beautiful background music while playing
+- Local storage to keep track of your best score
 - Paralax tilt
 #
 ![giphy (3)](https://github.com/Fadilix/memory-card/assets/121851593/902565d0-3fb4-4ad2-aa0a-051349c22f1e)
