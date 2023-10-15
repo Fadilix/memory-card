@@ -6,7 +6,9 @@ import "../scss/PageNotFound.scss"
 const PageNotFound = () => {
   return (
     <div className='pnf'>
+        <div style={{position: "absolute", top: 0, width: "100vw"}}>
         <NavBar />
+        </div>
             <div className='content'>
                 <p>404</p>
                 <div className='vertical-line'></div>
@@ -17,4 +19,4 @@ const PageNotFound = () => {
   )
 }
 
-export default PageNotFound
+export default PageNotFound;
