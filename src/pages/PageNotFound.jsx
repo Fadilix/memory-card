@@ -6,7 +6,7 @@ import "../scss/PageNotFound.scss"
 const PageNotFound = () => {
   return (
     <div className='pnf'>
-        <div style={{position: "absolute", top: 0, width: "100vw"}}>
+        <div style={{position: "absolute", top: 0, width: "100vw", zIndex: "1"}}>
         <NavBar />
         </div>
             <div className='content'>
