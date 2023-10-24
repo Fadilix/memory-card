@@ -16,12 +16,12 @@ const Card = ({ src, name, isFlipped, handleCardClick }) => {
             <div className={cardClasses} onClick={handleCardClick}>
                 {!isFlipped ? (
                     <div className='image-card'>
-                        <img src={src} alt="" />
+                        <img src={src} alt="" draggable="false" />
                         <h4>{name}</h4>
                     </div>
                 ) : (
                     <div className='card-back'>
-                        <img src={cardBackImage} alt="Card Back" />
+                        <img src={cardBackImage} alt="Card Back" draggable="false" />
                     </div>
                 )}
             </div>

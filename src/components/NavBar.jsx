@@ -13,7 +13,7 @@ const NavBar = ({ score, bestScore }) => {
                 <button
                     onClick={handleShowGamePage}
                 >
-                    <img src={dbz} alt="dragon ball z" />
+                    <img src={dbz} alt="dragon ball z" draggable="false"/>
                 </button>
             </div>
 
