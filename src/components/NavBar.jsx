@@ -18,8 +18,8 @@ const NavBar = ({ score, bestScore }) => {
             </div>
 
             <div className='score'>
-                <h3>Score: {score}</h3>
-                <h3>Best score: {bestScore}</h3>
+                <h3>Score : {score}</h3>
+                <h3>Best score : {bestScore}</h3>
             </div>
         </div>
     )

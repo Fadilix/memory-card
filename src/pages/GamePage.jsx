@@ -59,7 +59,7 @@ const GamePage = () => {
         return shuffledArray.slice(0, count);
     }
 
-    console.log(cards);
+    // console.log(cards);
 
     return (
         <motion.div
