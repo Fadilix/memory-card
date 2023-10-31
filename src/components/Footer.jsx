@@ -2,6 +2,7 @@ import React, { useRef, useState } from 'react';
 import "../scss/Footer.scss";
 import headChala from "../music/chala.mp3"
 import { motion } from 'framer-motion';
+import study from "../assets/gohanstudying.png"
 const Footer = () => {
     const audioRef = useRef(new Audio(headChala));
     const [isMusicPlaying, setIsMusicPlaying] = useState(false);
@@ -65,8 +66,9 @@ const Footer = () => {
                     transition={{ duration: .8 }}
                     className='help-box'
                 >
+                    <img src={study} alt="" />
                     <div className='help-message'>
-                        <p>Don't click on the same card twice</p>
+                        <p>Don't click on the same card twice. Be cautious not to select the same card more than once in the game.</p>
                     </div>
                 </motion.div>
             )}

@@ -11,6 +11,11 @@ import c17 from "../assets/c17.jpg"
 import c18 from "../assets/c18.jpg"
 import Jiren from "../assets/Jiren.jpg"
 import Whis from "../assets/Whis.avif"
+import Broly from "../assets/broly.jpg"
+import Cell from "../assets/cell.jpg"
+import Zeno from "../assets/zeno.webp"
+import Zoro from "../assets/zoro.jpg"
+
 
 export const imagesData = [
     { name: "Bulma", src: bulma },
@@ -26,4 +31,8 @@ export const imagesData = [
     { name: "C-18", src: c18, },
     { name: "Jiren", src: Jiren },
     { name: "Whis", src: Whis },
+    { name: "broly", src: Broly },
+    { name: "Cell", src: Cell },
+    { name: "Zeno", src: Zeno },
+    { name: "Zoro (He got lost again)", src: Zoro }
 ]

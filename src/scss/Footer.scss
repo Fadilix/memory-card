@@ -66,11 +66,22 @@
     .help-box {
         position: absolute;
         right: 4%;
-        bottom: 120%;
+        bottom: 180%;
         padding: 8px;
         border-radius: 8px;
         background-color: antiquewhite;
         font-size: 20px;
-    }
 
+        .help-message{
+            min-width: 50px;
+            max-width: 300px;
+        }
+
+        img{
+            width: 100px;
+            position: absolute;
+            right: 5%;
+            top: 100%;
+        }
+    }
 }

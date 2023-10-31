@@ -18,6 +18,7 @@ const GamePage = () => {
     const audio = new Audio(flip);
     const navigate = useNavigate();
 
+
     useEffect(() => {
         const storedBestScore = localStorage.getItem('bestScore');
         if (storedBestScore) {
