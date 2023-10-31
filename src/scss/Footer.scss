@@ -1,3 +1,5 @@
+$lightbisque: rgb(246, 203, 150);
+
 .footer {
     padding-left: 10px;
     position: fixed;
@@ -5,12 +7,12 @@
     align-items: center;
     gap: 10px;
     bottom: 0%;
-    background-color: bisque;
+    background-color: $lightbisque;
     width: 100vw;
     height: 70px;
 
     .music {
-        background-color: bisque;
+        background-color: $lightbisque;
         width: 40px;
         border-radius: 50%;
         padding: 5px;
@@ -51,7 +53,7 @@
     .help {
         all: unset;
         cursor: pointer;
-        background-color: bisque;
+        background-color: $lightbisque;
         position: absolute;
         right: 1%;
         width: 40px;
@@ -72,12 +74,12 @@
         background-color: antiquewhite;
         font-size: 20px;
 
-        .help-message{
+        .help-message {
             min-width: 50px;
             max-width: 300px;
         }
 
-        img{
+        img {
             width: 100px;
             position: absolute;
             right: 5%;
