@@ -16,7 +16,7 @@
     justify-content: space-between;
 
     h2 {
-        font-size: 5vw; 
+        font-size: 5vw;
         text-align: center;
         color: black;
         font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
@@ -26,11 +26,11 @@
         all: unset;
         cursor: pointer;
         background-color: transparent;
-        padding-inline: 4vw; 
-        padding-block: 1vw; 
+        padding-inline: 4vw;
+        padding-block: 1vw;
         font-weight: bold;
-        font-size: 2vw; 
-        border-radius: 2vw; 
+        font-size: 2vw;
+        border-radius: 2vw;
         border: 1px solid white;
         position: relative;
         transition: .3s;
@@ -43,8 +43,8 @@
             left: 50%;
             top: 50%;
             transform: translate(-50%, -50%);
-            width: 2vw; 
-            height: 2vw; 
+            width: 2vw;
+            height: 2vw;
             background-color: orange;
             border-radius: 50%;
             transition: width 0.3s ease;
@@ -65,7 +65,7 @@
         }
     }
 
-    @media (max-width: 600px) {
+    @media (max-width: 768px) {
         width: 90vw;
         height: 40vh;
 
