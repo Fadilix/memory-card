@@ -14,7 +14,7 @@ const GamePage = () => {
     const [isFlipped, setIsFlipped] = useState(false);
     const [score, setScore] = useState(0);
     const [bestScore, setBestScore] = useState(0);
-    
+
     const audio = new Audio(flip);
     const navigate = useNavigate();
 
@@ -72,7 +72,7 @@ const GamePage = () => {
             <NavBar bestScore={bestScore} score={score} />
             <div className='cards'>
                 {cards.map((card) => (
-                    <div className='card'>
+                    <div className='card' key={card.name}>
                         <Card
                             key={card.name}
                             name={card.name}

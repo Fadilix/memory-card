@@ -25,4 +25,4 @@ const NavBar = ({ score, bestScore }) => {
     )
 }
 
-export default NavBar
+export default NavBar;
