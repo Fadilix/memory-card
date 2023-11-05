@@ -1,9 +1,10 @@
-# Memory Card Game - The Odin Project
+# Memory Card Game
 
 ## [website live here](https://memory-card-ecru.vercel.app)
 
 
-Welcome to the Memory Card Game project from The Odin Project's curriculum! In this React-based web application, test your memory by flipping cards. Once a card is clicked, it can't be clicked again
+Welcome to the Memory Card Game project! In this React-based web application, test your memory by flipping cards. Once a card is clicked, it can't be clicked again.
+
 # Screnshot
 ![image](https://github.com/Fadilix/memory-card/assets/121851593/80b68764-d44f-42ce-aa21-838e011baf2e)
 
@@ -28,7 +29,7 @@ npm install
 npm run dev
 ```
 ## Project Description
-This project is part of [The Odin Project](https://www.theodinproject.com/)'s curriculum. The goal is to create a memory card game using React
+The goal is to create a memory card game using React
 
 ## Outcome
 - Used React JS
