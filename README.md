@@ -6,7 +6,7 @@
 Welcome to the Memory Card Game project! In this React-based web application, test your memory by flipping cards. Once a card is clicked, it can't be clicked again.
 
 # Screnshot
-![image](https://github.com/Fadilix/memory-card/assets/121851593/80b68764-d44f-42ce-aa21-838e011baf2e)
+![image](https://github.com/Fadilix/memory-card/assets/121851593/bc9f2633-75e1-40a2-ac13-324c79a1f250)
 
 ## Getting Started
 
