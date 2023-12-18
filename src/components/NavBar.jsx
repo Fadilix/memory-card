@@ -2,6 +2,9 @@ import React from 'react'
 import dbz from "../assets/Dragon_Ball_Z.webp"
 import "../scss/Navbar.scss"
 import { useNavigate } from 'react-router-dom'
+
+// Barre de navigation
+// logo, score et best score
 const NavBar = ({ score, bestScore }) => {
     const navigate = useNavigate();
     const handleShowGamePage = () => {
@@ -19,7 +22,7 @@ const NavBar = ({ score, bestScore }) => {
 
             <div className='score'>
                 <h3>Score : {score}</h3>
-                <h3>Best score : {bestScore}</h3>
+                <h3>Best score : {bestScore} / 25</h3>
             </div>
         </div>
     )
