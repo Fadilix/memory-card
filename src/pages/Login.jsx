@@ -19,11 +19,11 @@ const Login = () => {
     
     try {
       const response = await fetch(
-        "https://memory-card-api.vercel.app/api/v1/users/login",
+        "https://memory-card-api-v2.vercel.app/api/v1/users/login",
         {
-          methode: "POST",
+          method: "POST",
           headers: {
-            "content-type": "application/json",
+            "Content-Type": "application/json",
           },
           body: JSON.stringify({
             email,
@@ -32,15 +32,20 @@ const Login = () => {
         }
       );
 
+      const data = await response.json();
+      console.log(data);
       if (response.ok) {
-        localStorage.setItem("token", response.id);
+        localStorage.setItem("token", data.user.id);
         localStorage.setItem("email", email);
         toast.success("Login successful!");
-        window.location.href = "/";
+        // window.location.href = "/";
+
+      } else {
+        toast.error(data.message || "Login failed!");
       }
     } catch (error) {
       console.log(error);
-      toast.error("An error occured while logging in, please try again!");
+      toast.error("An error occurred while logging in, please try again!");
     }
   };
   return (
