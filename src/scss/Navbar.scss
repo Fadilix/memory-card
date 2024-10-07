@@ -5,6 +5,28 @@
     justify-content: space-between;
     margin-inline: 40px;
 
+    .link {
+        text-decoration: none;
+        color: white;
+        text-transform: uppercase;
+        position: relative;
+        font-weight: 500;
+        
+        &:after {
+            content: "";
+            position: absolute;
+            width: 0%;
+            height: 2px;
+            background-color: orange;
+            bottom: 0;
+            left: 0;
+            transition: .3s all;
+        }
+
+        &:hover::after {
+            width: 100%;
+        }
+    }
 
     .dbz-btn {
 
@@ -25,7 +47,7 @@
         }
     }
 
-    .score{
+    .score {
         color: white;
         display: flex;
         flex-direction: column;
