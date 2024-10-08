@@ -6,6 +6,7 @@ import { useUsers } from "../hooks/useUsers";
 
 const LeadBoard = () => {
   const { users } = useUsers();
+  console.log(users);
   return (
     <div className="appear">
       <NavBar />
@@ -50,7 +51,7 @@ const LeadBoard = () => {
                     <td>{index + 1}</td>
                     <td>{user.name}</td>
                     <td>{user.country}</td>
-                    <td>{user.gamesPlayed || 0}</td>
+                    <td>{user.gamePlayed || 0}</td>
                     <td>{user.bestScore || 0}</td>
                   </tr>
                 ))

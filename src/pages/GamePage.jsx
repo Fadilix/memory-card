@@ -20,18 +20,42 @@ const GamePage = () => {
   const navigate = useNavigate();
 
   const updateBestScore = async (score) => {
-    if (score >= bestScore) {
-      console.log("it is greater");
-      const userId = localStorage.getItem("token");
+    const userId = localStorage.getItem("token");
+    // update game played
+    if (userId) {
       try {
+        console.log("updating game played count");
         const response = await fetch(
-          `https://memory-card-api-v2.vercel.app/api/v1/users/${userId}`,
+          `https://memory-card-api-v2.vercel.app/api/v1/users/${userId}/game-played`,
           {
             method: "PUT",
             headers: {
               "Content-Type": "application/json",
             },
-            body: JSON.stringify({ bestScore, gamesPlayed: 1 }),
+            body: JSON.stringify({
+              gamePlayed: 1,
+            }),
+          }
+        );
+        const data = await response.json();
+        console.log(data);
+        console.log(response);
+      } catch (error) {
+        console.error(error);
+        toast.error("Error while updating game played");
+      }
+    }
+    if (score >= bestScore) {
+      console.log("it is greater");
+      try {
+        const response = await fetch(
+          `https://memory-card-api-v2.vercel.app/api/v1/users/${userId}/best-score`,
+          {
+            method: "PUT",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify({ bestScore: score }),
           }
         );
         const data = await response.json();
@@ -49,7 +73,7 @@ const GamePage = () => {
 
   const { user } = useUser();
   console.log(user);
-  
+
   useEffect(() => {
     const storedBestScore = localStorage.getItem("bestScore");
     setBestScore(storedBestScore);
