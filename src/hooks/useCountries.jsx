@@ -5,7 +5,9 @@ export const useCountries = () => {
   const fetchCountries = async () => {
     const response = await fetch("https://restcountries.com/v3.1/all");
     const data = await response.json();
-    setCountries(data.sort((a, b) => a.name.common.localeCompare(b.name.common)));
+    setCountries(
+      data.sort((a, b) => a.name.common.localeCompare(b.name.common))
+    );
   };
 
   useEffect(() => {

@@ -39,11 +39,17 @@ const LeadBoard = () => {
               {/* when there is no user print Loading... */}
               {users.length === 0 ? (
                 <tr>
-                  <td colSpan="5" style={{
-                    fontWeight: "bold",
-                    fontSize: "20px",
-                    textAlign: "center",
-                  }} className="pulse">Loading...</td>
+                  <td
+                    colSpan="5"
+                    style={{
+                      fontWeight: "bold",
+                      fontSize: "20px",
+                      textAlign: "center",
+                    }}
+                    className="pulse"
+                  >
+                    Loading...
+                  </td>
                 </tr>
               ) : (
                 users.map((user, index) => (

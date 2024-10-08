@@ -17,13 +17,12 @@ export const useUsers = () => {
           }
         );
         const data = await response.json();
-        // Ensure data is an array before sorting
-        // console.log(data);
-        const sortedUsers = Array.isArray(data.users) ? data.users.sort((a, b) => b.score - a.score) : [];
+        const sortedUsers = Array.isArray(data.users)
+          ? data.users.sort((a, b) => b.score - a.score)
+          : [];
         sortedUsers.forEach((user, index) => {
           user.rank = index + 1;
         });
-        // console.log(sortedUsers);
         setUsers(sortedUsers);
       } catch (error) {
         console.error(error);

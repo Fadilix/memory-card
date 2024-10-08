@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import NavBar from "../components/NavBar";
 import "../scss/Login.scss";
 import Footer from "../components/Footer";
@@ -6,6 +6,7 @@ import toast from "react-hot-toast";
 import { Link } from "react-router-dom";
 
 const Login = () => {
+  const [isLoading, setIsLoading] = useState(false);
   const handleLogin = async (e) => {
     e.preventDefault();
     const formData = new FormData(e.target);
@@ -19,6 +20,7 @@ const Login = () => {
     }
 
     try {
+      setIsLoading(true);
       const response = await fetch(
         "https://memory-card-api-v2.vercel.app/api/v1/users/login",
         {
@@ -47,6 +49,8 @@ const Login = () => {
     } catch (error) {
       console.log(error);
       toast.error("An error occurred while logging in, please try again!");
+    } finally {
+      setIsLoading(false);
     }
   };
   return (
@@ -60,16 +64,26 @@ const Login = () => {
             </div>
             <input type="text" placeholder="Email" autoFocus name="email" />
             <input type="password" placeholder="Password" name="password" />
-            <button type="submit">Login</button>
+            <button type="submit" disabled={isLoading}>
+              {isLoading ? "Loading..." : "Login"}
+            </button>
           </form>
           {/* don't have an acccount register here */}
-          <p style={{
-            color: "white",
-            textDecoration: "none",
-          }}>
-            Don't have an account? <Link to="/register" style={{
-              color: "orange",
-            }}>Register</Link>
+          <p
+            style={{
+              color: "white",
+              textDecoration: "none",
+            }}
+          >
+            Don't have an account?{" "}
+            <Link
+              to="/register"
+              style={{
+                color: "orange",
+              }}
+            >
+              Register
+            </Link>
           </p>
         </div>
       </div>
