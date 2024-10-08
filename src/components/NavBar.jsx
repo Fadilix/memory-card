@@ -14,6 +14,9 @@ const NavBar = ({ score, bestScore }) => {
   const handleLogout = () => {
     localStorage.removeItem("token");
     localStorage.removeItem("email");
+    localStorage.removeItem("name");
+    localStorage.removeItem("score");
+    localStorage.removeItem("bestScore");
     navigate("/login");
   };
   return (
