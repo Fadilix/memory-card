@@ -69,7 +69,7 @@ const Register = () => {
             </div>
             <input type="text" placeholder="Name" name="name" />
             <input type="email" placeholder="Email" name="email" />
-            <select>
+            <select name="country">
               {countries.map((country) => (
                 <option key={country.name.common} value={country.name.common}>
                   {country.name.common}
