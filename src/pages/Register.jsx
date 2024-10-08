@@ -1,10 +1,13 @@
-import React from "react";
+import React, { useState } from "react";
 import toast from "react-hot-toast";
 import NavBar from "../components/NavBar";
 import Footer from "../components/Footer";
 import "../scss/Register.scss";
+import { useCountries } from "../hooks/useCountries";
 
 const Register = () => {
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
   const handleRegister = async (e) => {
     e.preventDefault();
     const formData = new FormData(e.target);
@@ -12,7 +15,7 @@ const Register = () => {
     const email = formData.get("email");
     const password = formData.get("password");
     const confirmPassword = formData.get("confirmPassword");
-
+    
     if (!name || !email || !password || !confirmPassword) {
       toast.error("Please fill in all fields!");
       return;
@@ -24,6 +27,7 @@ const Register = () => {
     }
 
     try {
+      setIsSubmitting(true);
       const response = await fetch(
         "https://memory-card-api-v2.vercel.app/api/v1/users",
         {
@@ -45,8 +49,13 @@ const Register = () => {
     } catch (error) {
       toast.error("Error registering user!");
       console.error(error);
+    } finally {
+      setIsSubmitting(false);
     }
   };
+  
+  const { countries } = useCountries();
+  
   return (
     <div>
       <NavBar />
@@ -58,13 +67,22 @@ const Register = () => {
             </div>
             <input type="text" placeholder="Name" name="name" />
             <input type="email" placeholder="Email" name="email" />
+            <select name="country">
+              {countries.map((country) => (
+                <option key={country.name.common} value={country.name.common}>
+                  {country.name.common}
+                </option>
+              ))}
+            </select>
             <input type="password" placeholder="Password" name="password" />
             <input
               type="password"
               placeholder="Confirm Password"
               name="confirmPassword"
             />
-            <button type="submit">Register</button>
+            <button type="submit" disabled={isSubmitting}>
+              {isSubmitting ? "Registering..." : "Register"}
+            </button>
           </form>
         </div>
       </div>

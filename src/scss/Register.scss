@@ -15,7 +15,6 @@
         display: flex;
         align-items: center;
         flex-direction: column;
-        margin-top: 50px;
 
         form {
             display: flex;
@@ -36,7 +35,7 @@
                 margin-bottom: 10px;
             }
 
-            input {
+            input, select {
                 all: unset;
                 padding: 8px;
                 border: 1px solid #ccc;
@@ -47,7 +46,7 @@
                 }
             }
 
-            input {
+            input, select {
                 width: 250px;
                 max-width: 100%;
                 backdrop-filter: blur(3px);

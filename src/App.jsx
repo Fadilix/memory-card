@@ -7,6 +7,8 @@ import PageNotFound from "./pages/PageNotFound";
 import { Toaster } from "react-hot-toast";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
+import LeadBoard from "./pages/LeadBoard";
+
 const App = () => {
   return (
     <div>
@@ -15,7 +17,7 @@ const App = () => {
           <Route path="/" Component={GamePage} />
           <Route path="/gameover" Component={GameOver} />
           <Route path="/*" Component={PageNotFound} />
-          {/* <Route path="/leadboard" Component={Leadboard} /> */}
+          <Route path="/leadboard" Component={LeadBoard} />
           <Route path="/register" Component={Register} />
           <Route path="/login" Component={Login} />
         </Routes>
