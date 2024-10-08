@@ -16,7 +16,7 @@ const Login = () => {
       toast.error("Please fill in all fields!");
       return;
     }
-    
+
     try {
       const response = await fetch(
         "https://memory-card-api-v2.vercel.app/api/v1/users/login",
@@ -37,9 +37,9 @@ const Login = () => {
       if (response.ok) {
         localStorage.setItem("token", data.user.id);
         localStorage.setItem("email", email);
+        localStorage.setItem("name", data.user.name);
         toast.success("Login successful!");
-        // window.location.href = "/";
-
+        window.location.href = "/";
       } else {
         toast.error(data.message || "Login failed!");
       }
