@@ -5,7 +5,7 @@
 }
 
 // body {
-    // background: #232323;
+// background: #232323;
 // }
 
 input[type=text],
@@ -52,10 +52,10 @@ input[type=date],
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    background: #5055CB;
+    background: orange;
     padding: 10px 25px;
     border-radius: 10px;
-    border: 1px solid #686EF9;
+    border: 1px solid #000;
 }
 
 .ladder-title {
@@ -65,11 +65,11 @@ input[type=date],
 .ladder-search {
     flex: 1;
     padding-right: 25px;
-}
+}   
 
 .ladder-title {
     font-size: 20px;
-    color: #888DFF !important;
+    color: #fff !important;
     font-weight: bold;
     text-transform: uppercase;
 }
@@ -105,8 +105,8 @@ input[type=date],
     border-collapse: collapse;
     background: transparent;
     backdrop-filter: blur(10px);
-    border-top-left-radius: 10px;
     border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
 }
 
 .leaderboard-results thead th {

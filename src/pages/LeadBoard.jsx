@@ -1,27 +1,30 @@
 import React from "react";
 import "../scss/LeadBoard.scss";
 import NavBar from "../components/NavBar";
+import Footer from "../components/Footer";
+import { useUsers } from "../hooks/useUsers";
 
 const LeadBoard = () => {
+  const { users } = useUsers();
   return (
     <div>
       <NavBar />
-      <div class="container-wrap">
+      <div className="container-wrap">
         <section id="leaderboard">
-          <nav class="ladder-nav">
-            <div class="ladder-title">
+          <nav className="ladder-nav">
+            <div className="ladder-title">
               <h1>Standings</h1>
             </div>
-            <div class="ladder-search">
+            <div className="ladder-search">
               <input
                 type="text"
                 id="search-leaderboard"
-                class="live-search-box"
+                className="live-search-box"
                 placeholder="Search player..."
               />
             </div>
           </nav>
-          <table id="rankings" class="leaderboard-results" width="100%">
+          <table id="rankings" className="leaderboard-results" width="100%">
             <thead>
               <tr>
                 <th>Rank</th>
@@ -43,6 +46,7 @@ const LeadBoard = () => {
           </table>
         </section>
       </div>
+      <Footer />
     </div>
   );
 };

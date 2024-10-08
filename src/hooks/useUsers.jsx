@@ -8,10 +8,22 @@ export const useUsers = () => {
     const fetchUsers = async () => {
       try {
         const response = await fetch(
-          "https://memory-card-api.vercel.app/api/v1/users"
+          "https://memory-card-api-v2.vercel.app/api/v1/users",
+          {
+            method: "GET",
+            headers: {
+              "Content-Type": "application/json",
+            },
+          }
         );
         const data = await response.json();
-        setUsers(data);
+        // Ensure data is an array before sorting
+        const sortedUsers = Array.isArray(data) ? data.sort((a, b) => b.score - a.score) : [];
+        sortedUsers.forEach((user, index) => {
+          user.rank = index + 1;
+        });
+        console.log(sortedUsers);
+        setUsers(sortedUsers);
       } catch (error) {
         console.error(error);
         toast.error("Error while fetching users");

@@ -3,6 +3,7 @@ import NavBar from "../components/NavBar";
 import "../scss/Login.scss";
 import Footer from "../components/Footer";
 import toast from "react-hot-toast";
+import { Link } from "react-router-dom";
 
 const Login = () => {
   const handleLogin = async (e) => {
@@ -61,6 +62,15 @@ const Login = () => {
             <input type="password" placeholder="Password" name="password" />
             <button type="submit">Login</button>
           </form>
+          {/* don't have an acccount register here */}
+          <p style={{
+            color: "white",
+            textDecoration: "none",
+          }}>
+            Don't have an account? <Link to="/register" style={{
+              color: "orange",
+            }}>Register</Link>
+          </p>
         </div>
       </div>
       <Footer />

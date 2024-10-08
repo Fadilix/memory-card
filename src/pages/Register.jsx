@@ -4,6 +4,7 @@ import NavBar from "../components/NavBar";
 import Footer from "../components/Footer";
 import "../scss/Register.scss";
 import { useCountries } from "../hooks/useCountries";
+import { Link } from "react-router-dom";
 
 const Register = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -14,9 +15,10 @@ const Register = () => {
     const name = formData.get("name");
     const email = formData.get("email");
     const password = formData.get("password");
+    const country = formData.get("country");
     const confirmPassword = formData.get("confirmPassword");
     
-    if (!name || !email || !password || !confirmPassword) {
+    if (!name || !email || !password || !confirmPassword || !country) {
       toast.error("Please fill in all fields!");
       return;
     }
@@ -67,7 +69,7 @@ const Register = () => {
             </div>
             <input type="text" placeholder="Name" name="name" />
             <input type="email" placeholder="Email" name="email" />
-            <select name="country">
+            <select>
               {countries.map((country) => (
                 <option key={country.name.common} value={country.name.common}>
                   {country.name.common}
@@ -84,6 +86,15 @@ const Register = () => {
               {isSubmitting ? "Registering..." : "Register"}
             </button>
           </form>
+          {/* already have an account login here */}
+          <p style={{
+            color: "white",
+            textDecoration: "none",
+          }}>
+            Already have an account? <Link to="/login" style={{
+              color: "orange",
+            }}>Login</Link>
+          </p>
         </div>
       </div>
       <Footer />
