@@ -35,13 +35,15 @@ const LeadBoard = () => {
               </tr>
             </thead>
             <tbody>
-              <tr>
-                <td>1</td>
-                <td>2</td>
-                <td>3</td>
-                <td>4</td>
-                <td>5</td>
-              </tr>
+              {users.map((user, index) => (
+                <tr>
+                  <td>{index + 1}</td>
+                  <td>{user.name}</td>
+                  <td>{user.country}</td>
+                  <td>{user.gamesPlayed || 0}</td>
+                  <td>{user.bestScore || 0}</td>
+                </tr>
+              ))}
             </tbody>
           </table>
         </section>
