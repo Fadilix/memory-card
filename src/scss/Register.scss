@@ -1,0 +1,94 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.register-container {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+
+    .register-form {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        margin-top: 50px;
+
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            background-image: url("../assets/kame-house.jpg");
+            padding: 45px;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            border-radius: 10px;
+
+
+            .register-form-header {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin-bottom: 10px;
+            }
+
+            input {
+                all: unset;
+                padding: 8px;
+                border: 1px solid #ccc;
+                border-radius: 5px;
+
+                &::placeholder {
+                    color: #000;
+                }
+            }
+
+            input {
+                width: 250px;
+                max-width: 100%;
+                backdrop-filter: blur(3px);
+
+                &:focus {
+                    border: 1px solid black;
+                }
+            }
+
+            button {
+                all: unset;
+                padding: 8px;
+                border: 1px solid #ccc;
+                margin-top: 20px;
+                border-radius: 5px;
+                cursor: pointer;
+                // background: orangered;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                position: relative;
+                overflow: hidden;
+                font-weight: bold;
+                font-size: 18px;
+                background-color: rgb(235, 109, 60);
+                animation: floating 3s ease-in-out infinite;
+            }
+
+            @keyframes floating {
+                0% {
+                    transform: translateY(0);
+                }
+
+                50% {
+                    transform: translateY(-5px);
+                }
+
+                100% {
+                    transform: translateY(0);
+                }
+            }
+        }
+    }
+}
