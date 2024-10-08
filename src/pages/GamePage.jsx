@@ -7,6 +7,7 @@ import Footer from "../components/Footer";
 import { useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
 import flip from "../music/flip.mp3";
+import { useUser } from "../hooks/useUser";
 
 const GamePage = () => {
   const [cards, setCards] = useState(getRandomCards(imagesData, 4));
@@ -18,10 +19,43 @@ const GamePage = () => {
   const audio = new Audio(flip);
   const navigate = useNavigate();
 
+  const updateBestScore = async (score) => {
+    if (score >= bestScore) {
+      console.log("it is greater");
+      const userId = localStorage.getItem("token");
+      try {
+        const response = await fetch(
+          `https://memory-card-api-v2.vercel.app/api/v1/users/${userId}`,
+          {
+            method: "PUT",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify({ bestScore, gamesPlayed: 1 }),
+          }
+        );
+        const data = await response.json();
+        console.log(data);
+      } catch (error) {
+        console.error(error);
+        toast.error("Error while updating best score");
+      }
+    } else {
+      console.log("It is not greater");
+      console.log(score);
+      console.log(bestScore);
+    }
+  };
+
+  const { user } = useUser();
+  console.log(user);
+  
   useEffect(() => {
     const storedBestScore = localStorage.getItem("bestScore");
-    if (storedBestScore) {
-      setBestScore(parseInt(storedBestScore, 10));
+    setBestScore(storedBestScore);
+    if (user) {
+      setBestScore(user.bestScore);
+      localStorage.setItem("bestScore", user.bestScore);
     }
   }, []);
 
@@ -38,6 +72,7 @@ const GamePage = () => {
         setSelectedCards((prev) => [...prev, cardName]);
         setScore((prevScore) => prevScore + 1);
       } else {
+        updateBestScore(score);
         navigate("/gameover");
         setScore(0);
       }
@@ -48,18 +83,17 @@ const GamePage = () => {
 
   useEffect(() => {
     localStorage.setItem("score", score.toString());
-    if (score > bestScore) {
+    if (score > (bestScore || 0)) {
       setBestScore(score);
       localStorage.setItem("bestScore", score.toString());
     }
-  }, [score, bestScore]);
+  }, [score]);
 
   function getRandomCards(array, count) {
     const shuffledArray = array.sort(() => Math.random() - 0.5);
     return shuffledArray.slice(0, count);
   }
 
-  
   // console.log(cards);
   return (
     <motion.div

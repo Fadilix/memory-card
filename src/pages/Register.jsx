@@ -59,7 +59,7 @@ const Register = () => {
   const { countries } = useCountries();
   
   return (
-    <div>
+    <div className="appear">
       <NavBar />
       <div className="register-container">
         <div className="register-form">

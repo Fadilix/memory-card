@@ -50,7 +50,7 @@ const Login = () => {
     }
   };
   return (
-    <div>
+    <div className="appear">
       <NavBar />
       <div className="login-container">
         <div className="login-form">

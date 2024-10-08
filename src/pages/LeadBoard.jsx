@@ -7,7 +7,7 @@ import { useUsers } from "../hooks/useUsers";
 const LeadBoard = () => {
   const { users } = useUsers();
   return (
-    <div>
+    <div className="appear">
       <NavBar />
       <div className="container-wrap">
         <section id="leaderboard">
@@ -35,15 +35,26 @@ const LeadBoard = () => {
               </tr>
             </thead>
             <tbody>
-              {users.map((user, index) => (
+              {/* when there is no user print Loading... */}
+              {users.length === 0 ? (
                 <tr>
-                  <td>{index + 1}</td>
-                  <td>{user.name}</td>
-                  <td>{user.country}</td>
-                  <td>{user.gamesPlayed || 0}</td>
-                  <td>{user.bestScore || 0}</td>
+                  <td colSpan="5" style={{
+                    fontWeight: "bold",
+                    fontSize: "20px",
+                    textAlign: "center",
+                  }} className="pulse">Loading...</td>
                 </tr>
-              ))}
+              ) : (
+                users.map((user, index) => (
+                  <tr key={user.id}>
+                    <td>{index + 1}</td>
+                    <td>{user.name}</td>
+                    <td>{user.country}</td>
+                    <td>{user.gamesPlayed || 0}</td>
+                    <td>{user.bestScore || 0}</td>
+                  </tr>
+                ))
+              )}
             </tbody>
           </table>
         </section>
