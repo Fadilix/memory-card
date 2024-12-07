@@ -28,6 +28,12 @@ input[type=date] {
     -webkit-transition: all 0.2s ease;
 }
 
+
+table {
+    margin-bottom: 100px;
+}
+
+
 input[type=text],
 textarea,
 input[type=email],
@@ -124,7 +130,7 @@ input[type=date],
 
 
 .leaderboard-results tbody tr {
-    color: #747474;
+    color: #686EF9;
 }
 
 .leaderboard-results tbody tr:first-child {

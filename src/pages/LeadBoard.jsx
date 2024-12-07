@@ -17,12 +17,12 @@ const LeadBoard = () => {
               <h1>Standings</h1>
             </div>
             <div className="ladder-search">
-              <input
+              {/* <input
                 type="text"
                 id="search-leaderboard"
                 className="live-search-box"
                 placeholder="Search player..."
-              />
+              /> */}
             </div>
           </nav>
           <table id="rankings" className="leaderboard-results" width="100%">
