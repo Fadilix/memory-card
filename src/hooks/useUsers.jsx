@@ -17,8 +17,9 @@ export const useUsers = () => {
           }
         );
         const data = await response.json();
+        console.log(data);
         const sortedUsers = Array.isArray(data.users)
-          ? data.users.sort((a, b) => b.score - a.score)
+          ? data.users.sort((a, b) => b.bestScore - a.bestScore)
           : [];
         sortedUsers.forEach((user, index) => {
           user.rank = index + 1;
