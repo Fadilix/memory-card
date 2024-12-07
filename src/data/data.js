@@ -23,9 +23,14 @@ import Goten from "../assets/Goten.webp"
 import GokuBlueKaioken from "../assets/GokuBlueKaioken.webp"
 import Gogeta from "../assets/gogeta.png"
 import Gotenks from "../assets/Gotenks.webp"
+import GotenksSSJ3 from "../assets/gotenksssj3.png"
+import GogetaSSJ4 from "../assets/gogetassj4.png"
+import GohanBeast from "../assets/gohan_beast.png"
+import GoldenFreezer from "../assets/golden_freezer.png"
+import Bardock from "../assets/bardock.png"
+
 
 export const imagesData = [
-
     { name: "Bulma", src: bulma },
     { name: "Chichi", src: chichi },
     { name: "Gohan", src: gohan },
@@ -51,5 +56,9 @@ export const imagesData = [
     { name: "Goku SSJ Blue Kaioken", src: GokuBlueKaioken },
     { name: "Gogeta", src: Gogeta },
     { name: "Gotenks", src: Gotenks },
-
+    { name: "Gotenks SSJ3", src: GotenksSSJ3 },
+    { name: "Gogeta SSJ4", src: GogetaSSJ4 },
+    { name: "Gohan Beast", src: GohanBeast },
+    { name: "Golden Freezer", src: GoldenFreezer },
+    { name: "Bardock", src: Bardock }
 ]

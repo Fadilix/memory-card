@@ -54,7 +54,7 @@ const NavBar = ({ score, bestScore }) => {
           </>
         )}
         <h3>Score : {score}</h3>
-        <h3>Best score : {bestScore} / 25</h3>
+        <h3>Best score : {bestScore} / 30</h3>
       </div>
     </div>
   );
