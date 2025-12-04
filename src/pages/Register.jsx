@@ -15,7 +15,7 @@ const Register = () => {
     const name = formData.get("name");
     const email = formData.get("email");
     const password = formData.get("password");
-    const country = formData.get("country");
+    // const country = formData.get("country");
     const confirmPassword = formData.get("confirmPassword");
     
     if (!name || !email || !password || !confirmPassword || !country) {
@@ -37,7 +37,7 @@ const Register = () => {
           headers: {
             "Content-Type": "application/json",
           },
-          body: JSON.stringify({ name, email, password, country }),
+          body: JSON.stringify({ name, email, password, country: "" }),
         }
       );
       const data = await response.json();
