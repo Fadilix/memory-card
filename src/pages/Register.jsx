@@ -1,9 +1,9 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import toast from "react-hot-toast";
 import NavBar from "../components/NavBar";
 import Footer from "../components/Footer";
 import "../scss/Register.scss";
-import { useCountries } from "../hooks/useCountries";
+// import { useCountries } from "../hooks/useCountries";
 import { Link } from "react-router-dom";
 
 const Register = () => {
