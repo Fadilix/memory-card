@@ -7,6 +7,7 @@ import { useCountries } from "../hooks/useCountries";
 import { Link } from "react-router-dom";
 
 const Register = () => {
+  const countries = ["world", "wide", "web"];
   const [isSubmitting, setIsSubmitting] = useState(false);
 
   const handleRegister = async (e) => {
@@ -15,9 +16,9 @@ const Register = () => {
     const name = formData.get("name");
     const email = formData.get("email");
     const password = formData.get("password");
-    // const country = formData.get("country");
+    const country = formData.get("country");
     const confirmPassword = formData.get("confirmPassword");
-    
+
     if (!name || !email || !password || !confirmPassword || !country) {
       toast.error("Please fill in all fields!");
       return;
@@ -37,7 +38,7 @@ const Register = () => {
           headers: {
             "Content-Type": "application/json",
           },
-          body: JSON.stringify({ name, email, password, country: "" }),
+          body: JSON.stringify({ name, email, password, country }),
         }
       );
       const data = await response.json();
@@ -55,9 +56,9 @@ const Register = () => {
       setIsSubmitting(false);
     }
   };
-  
-  const { countries } = useCountries();
-  
+
+  // const { countries } = useCountries();
+
   return (
     <div className="appear">
       <NavBar />
@@ -70,11 +71,11 @@ const Register = () => {
             <input type="text" placeholder="Name" name="name" />
             <input type="email" placeholder="Email" name="email" />
             <select name="country">
-              {countries.map((country) => (
-                <option key={country.name.common} value={country.name.common}>
-                  {country.name.common}
-                </option>
-              ))}
+              {
+                countries.map((country, index) => (
+                  <option key={index}>{country}</option>
+                ))
+              }
             </select>
             <input type="password" placeholder="Password" name="password" />
             <input
@@ -87,13 +88,21 @@ const Register = () => {
             </button>
           </form>
           {/* already have an account login here */}
-          <p style={{
-            color: "white",
-            textDecoration: "none",
-          }}>
-            Already have an account? <Link to="/login" style={{
-              color: "orange",
-            }}>Login</Link>
+          <p
+            style={{
+              color: "white",
+              textDecoration: "none",
+            }}
+          >
+            Already have an account?{" "}
+            <Link
+              to="/login"
+              style={{
+                color: "orange",
+              }}
+            >
+              Login
+            </Link>
           </p>
         </div>
       </div>
